@@ -1,15 +1,17 @@
 package com.riadul.advancedandroid.view_model
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class ViewModelD1ActivityViewModel : ViewModel() {
-    private var count = 0
 
-    fun getCurrentCount(): Int {
-        return count
+    var count = MutableLiveData<Int>()
+
+    init {
+        count.value = 0
     }
 
-    fun getUpdatedCount(): Int {
-        return ++count
+    fun updateCount() {
+        count.value = (count.value)?.plus(1)
     }
 }
