@@ -1,21 +1,23 @@
 package com.riadul.advancedandroid.view_model
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class ViewModelD2ActivityViewModel(
     startingTotal: Int
 ) : ViewModel() {
-    private var total = 0
+
+    private var total = MutableLiveData<Int>()
+
+    val totalData: LiveData<Int>
+        get() = total
 
     init {
-        total = startingTotal
-    }
-
-    fun getTotal(): Int {
-        return total
+        total.value = startingTotal
     }
 
     fun setTotal(input: Int) {
-        total += input
+        total.value = (total.value)?.plus(input)
     }
 }

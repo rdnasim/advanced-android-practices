@@ -3,6 +3,7 @@ package com.riadul.advancedandroid.view_model
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.riadul.advancedandroid.R
 import com.riadul.advancedandroid.databinding.ActivityViewModelD2Binding
@@ -18,11 +19,12 @@ class ViewModelD2Activity : AppCompatActivity() {
         viewModelFactory = ViewModelD2ActivityViewModelFactory(125)
         viewModel = ViewModelProvider(this, viewModelFactory)[ViewModelD2ActivityViewModel::class.java]
 
-        binding.resultTextView.text = viewModel.getTotal().toString()
+        viewModel.totalData.observe(this) {
+            binding.resultTextView.text = it.toString()
+        }
 
         binding.insertButton.setOnClickListener {
             viewModel.setTotal(binding.inputEditText.text.toString().toInt())
-            binding.resultTextView.text = viewModel.getTotal().toString()
         }
     }
 }
