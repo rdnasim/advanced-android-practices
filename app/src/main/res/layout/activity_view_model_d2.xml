@@ -4,6 +4,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="viewModelDemo2"
+            type="com.riadul.advancedandroid.view_model.ViewModelD2ActivityViewModel"/>
+    </data>
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,6 +23,7 @@
             android:ems="10"
             android:inputType="number"
             android:textSize="36sp"
+            android:text="@={viewModelDemo2.inputText}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.323"
@@ -31,6 +39,7 @@
             android:layout_marginTop="40dp"
             android:text="Add"
             android:textSize="36sp"
+            android:onClick="@{()->viewModelDemo2.setTotal()}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/input_edit_text" />
 
@@ -42,6 +51,7 @@
             android:layout_marginTop="32dp"
             android:layout_marginEnd="41dp"
             android:textSize="36sp"
+            android:text="@{String.valueOf(viewModelDemo2.totalData)}"
             app:layout_constraintEnd_toEndOf="@+id/insert_button"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/insert_button" />

@@ -18,12 +18,7 @@ class ViewModelD2Activity : AppCompatActivity() {
         viewModelFactory = ViewModelD2ActivityViewModelFactory(125)
         viewModel = ViewModelProvider(this, viewModelFactory)[ViewModelD2ActivityViewModel::class.java]
 
-        viewModel.totalData.observe(this) {
-            binding.resultTextView.text = it.toString()
-        }
-
-        binding.insertButton.setOnClickListener {
-            viewModel.setTotal(binding.inputEditText.text.toString().toInt())
-        }
+        binding.viewModelDemo2 = viewModel
+        binding.lifecycleOwner = this
     }
 }
