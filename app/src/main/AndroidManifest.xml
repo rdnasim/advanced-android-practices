@@ -13,6 +13,9 @@
         android:theme="@style/Theme.AdvancedAndroid"
         tools:targetApi="31">
         <activity
+            android:name=".two_way_data_binding.TwoWayDBActivity"
+            android:exported="false" />
+        <activity
             android:name=".view_model.ViewModelD2Activity"
             android:exported="false" />
         <activity
