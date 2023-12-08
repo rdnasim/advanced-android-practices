@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navDemo1HomeFragment">
+
+
+    <fragment
+        android:id="@+id/navDemo1HomeFragment"
+        android:name="com.riadul.advancedandroid.NavDemo1HomeFragment"
+        android:label="fragment_nav_demo1_home"
+        tools:layout="@layout/fragment_nav_demo1_home" >
+        <action
+            android:id="@+id/action_navDemo1HomeFragment_to_navDemo1SecondFragment"
+            app:destination="@id/navDemo1SecondFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/navDemo1SecondFragment"
+        android:name="com.riadul.advancedandroid.NavDemo1SecondFragment"
+        android:label="fragment_nav_demo1_second"
+        tools:layout="@layout/fragment_nav_demo1_second" />
+</navigation>

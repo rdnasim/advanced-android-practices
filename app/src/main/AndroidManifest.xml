@@ -13,6 +13,9 @@
         android:theme="@style/Theme.AdvancedAndroid"
         tools:targetApi="31">
         <activity
+            android:name=".nav.demo1.NavDemo1Activity"
+            android:exported="false" />
+        <activity
             android:name=".two_way_data_binding.TwoWayDBActivity"
             android:exported="false" />
         <activity

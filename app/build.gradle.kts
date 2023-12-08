@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -32,6 +33,10 @@ android {
         jvmTarget = "1.8"
     }
 
+    dataBinding {
+        isEnabled = true
+    }
+
     buildFeatures {
         dataBinding = true
     }
@@ -53,4 +58,11 @@ dependencies {
 
     // live data
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion")
+
+    // nav component
+    val navVersion = "2.7.5"
+    implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
+    implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
+    // safe args
+    //implementation("androidx.navigation:navigation-safe-args-gradle-plugin:$navVersion")
 }
