@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
+import com.riadul.advancedandroid.coroutine.CoroutineMainActivity
 import com.riadul.advancedandroid.data_binding.DataBinding2Activity
 import com.riadul.advancedandroid.data_binding.DataBinding3Activity
 import com.riadul.advancedandroid.databinding.ActivityMainBinding
@@ -46,6 +47,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.buttonRecycleView.setOnClickListener {
             startActivity(Intent(this, RecycleViewMainActivity::class.java))
+        }
+
+        binding.buttonCoroutine.setOnClickListener {
+            startActivity(Intent(this, CoroutineMainActivity::class.java))
         }
     }
 }

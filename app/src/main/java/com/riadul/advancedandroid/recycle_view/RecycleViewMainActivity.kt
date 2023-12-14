@@ -11,7 +11,7 @@ import com.riadul.advancedandroid.recycle_view.model.Fruit
 
 class RecycleViewMainActivity : AppCompatActivity() {
 
-    val fruitsList = listOf(
+    private val fruitsList = listOf(
         Fruit(name = "Apple", supplier = "Supplier A"),
         Fruit(name = "Banana", supplier = "Supplier B"),
         Fruit(name = "Orange", supplier = "Supplier C"),

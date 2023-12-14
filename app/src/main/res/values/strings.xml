@@ -2,4 +2,7 @@
     <string name="app_name">Advanced Android</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="click_here">Click Here</string>
+    <string name="download_user_data">Download User Data</string>
 </resources>

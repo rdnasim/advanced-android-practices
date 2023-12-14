@@ -63,6 +63,10 @@ dependencies {
     val navVersion = "2.7.5"
     implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
     implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
-    // safe args
-    //implementation("androidx.navigation:navigation-safe-args-gradle-plugin:$navVersion")
+
+    // coroutines and coroutines android
+    val coroutinesVersion = "1.6.4"
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion")
+
 }
