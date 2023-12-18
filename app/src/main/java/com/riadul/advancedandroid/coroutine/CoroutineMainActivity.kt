@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
 import com.riadul.advancedandroid.R
 import com.riadul.advancedandroid.databinding.ActivityCoroutineMainBinding
 import kotlinx.coroutines.CoroutineScope
@@ -16,12 +17,21 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class CoroutineMainActivity : AppCompatActivity() {
+    private lateinit var viewModel: CoroutineMainActivityViewModel
     private lateinit var binding: ActivityCoroutineMainBinding
     private var count = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 //        setContentView(R.layout.activity_coroutine_main)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_coroutine_main)
+
+        viewModel = ViewModelProvider(this)[CoroutineMainActivityViewModel::class.java]
+
+        viewModel.getUserData()
+        viewModel.users.observe(this) {
+            Log.i("Coroutines", "Users: $it")
+        }
+
 
 //        CoroutineScope(Dispatchers.IO).launch {
 //            Log.i("Coroutines", "Main Thread: ${Thread.currentThread().name}")
@@ -51,7 +61,8 @@ class CoroutineMainActivity : AppCompatActivity() {
 
         binding.btnDownloadUserData.setOnClickListener {
             CoroutineScope(Main).launch{
-                binding.tvUserMessage.text = UserDataManager().getTotalUserCount().toString()
+//                binding.tvUserMessage.text = UserDataManager().getTotalUserCount().toString()
+                binding.tvUserMessage.text = UserDataManager2().getTotalUserCount().toString()
             }
 //            CoroutineScope(IO).launch {
 //                downloadUserData()

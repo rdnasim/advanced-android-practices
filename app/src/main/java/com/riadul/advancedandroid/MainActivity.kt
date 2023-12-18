@@ -8,6 +8,7 @@ import com.riadul.advancedandroid.coroutine.CoroutineMainActivity
 import com.riadul.advancedandroid.data_binding.DataBinding2Activity
 import com.riadul.advancedandroid.data_binding.DataBinding3Activity
 import com.riadul.advancedandroid.databinding.ActivityMainBinding
+import com.riadul.advancedandroid.lifecycle_scope.LifeCycleMainActivity
 import com.riadul.advancedandroid.nav.demo1.NavDemo1Activity
 import com.riadul.advancedandroid.recycle_view.RecycleViewMainActivity
 import com.riadul.advancedandroid.two_way_data_binding.TwoWayDBActivity
@@ -51,6 +52,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.buttonCoroutine.setOnClickListener {
             startActivity(Intent(this, CoroutineMainActivity::class.java))
+        }
+
+        binding.buttonLifeCycle.setOnClickListener {
+            startActivity(Intent(this, LifeCycleMainActivity::class.java))
         }
     }
 }

@@ -66,5 +66,12 @@
             android:text="Coroutine"
             android:textSize="15sp"/>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonLifeCycle"
+            android:text="LifeCycle Scope"
+            android:textSize="15sp"/>
+
     </LinearLayout>
 </layout>
