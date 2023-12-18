@@ -27,7 +27,7 @@ class CoroutineMainActivity : AppCompatActivity() {
 
         viewModel = ViewModelProvider(this)[CoroutineMainActivityViewModel::class.java]
 
-        viewModel.getUserData()
+        //viewModel.getUserData()
         viewModel.users.observe(this) {
             Log.i("Coroutines", "Users: $it")
         }
