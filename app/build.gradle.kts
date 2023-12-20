@@ -34,7 +34,7 @@ android {
     }
 
     dataBinding {
-        isEnabled = true
+        enable = true
     }
 
     buildFeatures {
@@ -61,6 +61,15 @@ dependencies {
 
     // life cycle extensions
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion")
+
+    // life cycle Annotation processor
+    kapt("androidx.lifecycle:lifecycle-compiler:$lifecycleVersion")
+
+    // room
+    val roomVersion = "2.6.1"
+    implementation("androidx.room:room-runtime:$roomVersion")
+    kapt("androidx.room:room-compiler:$roomVersion")
+    implementation("androidx.room:room-ktx:$roomVersion")
 
     // nav component
     val navVersion = "2.7.6"

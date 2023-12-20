@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".room_demo.RoomMainActivity">
+
+    <data>
+        <variable
+            name="roomMainViewModel"
+            type="com.riadul.advancedandroid.room_demo.SubscriberViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/name_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_marginBottom="5dp"
+            android:autofillHints="name"
+            android:ems="10"
+            android:hint="@string/subscriber_s_name"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:text="@={roomMainViewModel.inputName}"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/email_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:autofillHints="email"
+            android:ems="10"
+            android:hint="@string/subscriber_s_email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:text="@={roomMainViewModel.inputEmail}"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/save_or_update_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@={roomMainViewModel.saveOrUpdateButtonText}"
+                android:onClick="@{()->roomMainViewModel.saveOrUpdate()}"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/clear_all_or_delete_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@={roomMainViewModel.clearAllOrDeleteButtonText}"
+                android:onClick="@{()->roomMainViewModel.clearAllOrDelete()}"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/subscriber_recycleView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</layout>

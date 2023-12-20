@@ -13,6 +13,9 @@
         android:theme="@style/Theme.AdvancedAndroid"
         tools:targetApi="31">
         <activity
+            android:name=".room_demo.RoomMainActivity"
+            android:exported="false" />
+        <activity
             android:name=".lifecycle_scope.LifeCycleMainActivity"
             android:exported="false" />
         <activity

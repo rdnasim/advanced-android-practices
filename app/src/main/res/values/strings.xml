@@ -5,4 +5,6 @@
 
     <string name="click_here">Click Here</string>
     <string name="download_user_data">Download User Data</string>
+    <string name="subscriber_s_name">Subscriber\'s name</string>
+    <string name="subscriber_s_email">Subscriber\'s email</string>
 </resources>
