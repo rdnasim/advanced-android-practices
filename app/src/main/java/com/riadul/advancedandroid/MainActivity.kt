@@ -18,6 +18,7 @@ import com.riadul.advancedandroid.room_migration.RoomMigrationMainActivity
 import com.riadul.advancedandroid.two_way_data_binding.TwoWayDBActivity
 import com.riadul.advancedandroid.view_model.ViewModelD1Activity
 import com.riadul.advancedandroid.view_model.ViewModelD2Activity
+import com.riadul.advancedandroid.workmanager.WorkManagerMainActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -76,6 +77,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.buttonNotification.setOnClickListener {
             startActivity(Intent(this, NotificationMainActivity::class.java))
+        }
+
+        binding.buttonWorkManager.setOnClickListener {
+            startActivity(Intent(this, WorkManagerMainActivity::class.java))
         }
     }
 }

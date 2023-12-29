@@ -91,4 +91,8 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp:$okhttpVersion")
     implementation("com.squareup.okhttp3:logging-interceptor:$okhttpVersion")
 
+    // work manager
+    val workManagerVersion = "2.9.0"
+    implementation("androidx.work:work-runtime-ktx:$workManagerVersion")
+
 }
