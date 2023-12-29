@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
         android:allowBackup="true"
@@ -16,6 +17,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AdvancedAndroid"
         tools:targetApi="31">
+        <activity
+            android:name=".notification.NotificationSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".notification.NotificationDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".notification.NotificationSecondActivity"
+            android:exported="false" />
+        <activity
+            android:name=".notification.NotificationMainActivity"
+            android:exported="false" />
         <activity
             android:name=".retrofit.RetrofitMainActivity"
             android:exported="false" />

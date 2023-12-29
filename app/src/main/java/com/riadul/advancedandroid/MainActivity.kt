@@ -10,6 +10,7 @@ import com.riadul.advancedandroid.data_binding.DataBinding3Activity
 import com.riadul.advancedandroid.databinding.ActivityMainBinding
 import com.riadul.advancedandroid.lifecycle_scope.LifeCycleMainActivity
 import com.riadul.advancedandroid.nav.demo1.NavDemo1Activity
+import com.riadul.advancedandroid.notification.NotificationMainActivity
 import com.riadul.advancedandroid.recycle_view.RecycleViewMainActivity
 import com.riadul.advancedandroid.retrofit.RetrofitMainActivity
 import com.riadul.advancedandroid.room_demo.RoomMainActivity
@@ -71,6 +72,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.buttonRetrofit.setOnClickListener {
             startActivity(Intent(this, RetrofitMainActivity::class.java))
+        }
+
+        binding.buttonNotification.setOnClickListener {
+            startActivity(Intent(this, NotificationMainActivity::class.java))
         }
     }
 }
