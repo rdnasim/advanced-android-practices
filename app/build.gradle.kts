@@ -95,4 +95,10 @@ dependencies {
     val workManagerVersion = "2.9.0"
     implementation("androidx.work:work-runtime-ktx:$workManagerVersion")
 
+    // dagger
+    val daggerVersion = "2.50"
+    implementation("com.google.dagger:dagger:$daggerVersion")
+    kapt("com.google.dagger:dagger-compiler:$daggerVersion")
+
+
 }

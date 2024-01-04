@@ -8,6 +8,7 @@ import com.riadul.advancedandroid.coroutine.CoroutineMainActivity
 import com.riadul.advancedandroid.data_binding.DataBinding2Activity
 import com.riadul.advancedandroid.data_binding.DataBinding3Activity
 import com.riadul.advancedandroid.databinding.ActivityMainBinding
+import com.riadul.advancedandroid.dependancy_injection.DIMainActivity
 import com.riadul.advancedandroid.lifecycle_scope.LifeCycleMainActivity
 import com.riadul.advancedandroid.nav.demo1.NavDemo1Activity
 import com.riadul.advancedandroid.notification.NotificationMainActivity
@@ -82,5 +83,10 @@ class MainActivity : AppCompatActivity() {
         binding.buttonWorkManager.setOnClickListener {
             startActivity(Intent(this, WorkManagerMainActivity::class.java))
         }
+
+        binding.buttonDIMain.setOnClickListener {
+            startActivity(Intent(this, DIMainActivity::class.java))
+        }
+
     }
 }
