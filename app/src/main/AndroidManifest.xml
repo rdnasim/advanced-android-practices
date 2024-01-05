@@ -19,6 +19,9 @@
         android:theme="@style/Theme.AdvancedAndroid"
         tools:targetApi="31">
         <activity
+            android:name=".tmdb_client.TMDBMainActivity"
+            android:exported="false" />
+        <activity
             android:name=".dependancy_injection.DIMainActivity"
             android:exported="false" />
         <activity

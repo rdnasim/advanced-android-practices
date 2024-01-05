@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
+import com.riadul.advancedandroid.tmdb_client.TMDBMainActivity
 import com.riadul.advancedandroid.coroutine.CoroutineMainActivity
 import com.riadul.advancedandroid.data_binding.DataBinding2Activity
 import com.riadul.advancedandroid.data_binding.DataBinding3Activity
@@ -86,6 +87,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.buttonDIMain.setOnClickListener {
             startActivity(Intent(this, DIMainActivity::class.java))
+        }
+
+        binding.buttonTMDBClient.setOnClickListener {
+            startActivity(Intent(this, TMDBMainActivity::class.java))
         }
 
     }

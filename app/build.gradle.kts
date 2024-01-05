@@ -17,6 +17,8 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField ("String", "API_KEY", "\"1c146fc0f207bb90be80dfc328a9ad4e\"")
     }
 
     buildTypes {
@@ -39,6 +41,7 @@ android {
 
     buildFeatures {
         dataBinding = true
+        buildConfig = true
     }
 }
 
@@ -99,6 +102,11 @@ dependencies {
     val daggerVersion = "2.50"
     implementation("com.google.dagger:dagger:$daggerVersion")
     kapt("com.google.dagger:dagger-compiler:$daggerVersion")
+
+    // glide
+    val glideVersion = "4.15.1"
+    implementation("com.github.bumptech.glide:glide:$glideVersion")
+    kapt("com.github.bumptech.glide:compiler:$glideVersion")
 
 
 }
